@@ -13,38 +13,40 @@ const calcularImc = () => {
         document.getElementById("resultado");
 
     if( nome !== '' && peso !== '' && altura !== ''){
-        const imc = (peso/(altura*altura));
+        const imc = (peso/(altura*altura)).toFixed(2);
         //comando para exibir no console 'f12'
         console.log('altura: ', altura);
 
         let classificacao = '';
 
         if(imc < 18.5){
-            classificacao = 'Abaixo do peso';
+            classificacao = 'abaixo do peso.';
         }
         else if(imc < 25){
-            classificacao = 'compeso ideal. parabens!!!';
+            classificacao = 'com peso ideal. Parabens!!!';
         }
         else if (imc < 30){
             classificacao = 'levemente acima do peso.';
         }
         else if (imc < 35){
-            classificacao = 'obesidade grau I';
+            classificacao = 'com obesidade grau I.';
         }
         else if(imc < 40){
-            classificacao = 'obesidade grau II';
+            classificacao = 'com obesidade grau II.';
         }
         else {
-            classificacao = 'obesidade grau III. cuidado!!!';
+            classificacao = 'com obesidade grau III. Cuidado!!!';
         }
         resultado.textContent = 
-            `${nome}, seu IMC e ${imc} e vc esta ${classificacao}`
+            `${nome}, seu IMC é ${imc} e vc está ${classificacao}`
 
     }
     else {
         resultado.textContent = 
         'preencha todos os campos';
     }
+
+    limparCampos();
     
 };
 
@@ -57,9 +59,10 @@ const limparCampos = () => {
         document.getElementById("peso").value = null;
 };
 
+// código máscara para usar em CaretPosition, telefone, cpf etc
 const mascaraAltura = (value, pattern) => {
     let i = 0;
-    let v = value.tostring();
+    let v = value.toString();
     v = v.replace(/\D/g, '');
     return pattern.replace(/#/g, () => v[i++] || '');
 };

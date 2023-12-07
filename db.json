@@ -1,0 +1,24 @@
+{
+  "filmes": [
+    {
+      "id": 1,
+      "title": "json atava novamente",
+      "author": "Rudigo"
+    },
+    {
+      "id": 2,
+      "title": "meio saque",
+      "author": "Patrikao"
+    },
+    {
+      "id": 3,
+      "title": "faroeste caboclo",
+      "author": "kleitao"
+    },
+    {
+      "title": "SENAI acaba com o Caio novamente 2",
+      "author": "Rudigo",
+      "id": 4
+    }
+  ]
+}

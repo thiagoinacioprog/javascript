@@ -13,9 +13,9 @@
       "preco": 200
     },
     {
-      "nome": "The Legend of Zelda",
+      "nome": "The Legend of Zelda 2",
       "img": "https://codetheworld.io/wp-content/uploads/2023/12/Dark-Souls.png",
-      "preco": 100,
+      "preco": 300,
       "id": 3
     }
   ]
